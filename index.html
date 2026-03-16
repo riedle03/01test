@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>교실 상태 알림</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>교실 상태 알림</h1>
+      <p id="status-text" aria-live="polite">현재 상태: 수업중</p>
+
+      <div class="controls" role="group" aria-label="교실 상태 선택">
+        <button type="button" data-status="class">수업중</button>
+        <button type="button" data-status="activity">활동중</button>
+        <button type="button" data-status="break">쉬는중</button>
+      </div>
+
+      <section class="display" aria-label="신호등 표시 영역">
+        <img
+          id="signal-image"
+          src="assets/signal-class.svg"
+          alt="수업중 상태를 나타내는 빨간 신호등"
+        />
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
